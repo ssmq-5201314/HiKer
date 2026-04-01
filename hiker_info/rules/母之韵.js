@@ -346,7 +346,7 @@ const csdown = {
                 toast('抖音图片无法显示')
             }
             let url = getItem('host') + '/api/v2/video/short/videos';
-            toast(url)
+            toast('123')
             let body = '{"timestamp":' + t + ',"version":"0.1.0","os":"h5","uid":' + getItem('uid') + ',"token":"' + getItem('token') + '"}';
             let list = post(url, body).list;
             list.forEach(data => {
