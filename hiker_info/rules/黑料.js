@@ -61,7 +61,6 @@ const csdown = {
         }
 
         function Cate(list, n, d, col, longclick) {
-            log('Cate')
             if (!col) {
                 col = 'scroll_button';
             }
@@ -96,6 +95,7 @@ const csdown = {
                     col_type: 'blank_block',
                 });
             })
+             log('Cate')
             return d;
         }
 
