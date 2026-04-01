@@ -38,6 +38,7 @@ const mls = {
                     Cate(视频分类, '视频分类', d);
                 }
                 var url = getItem('host') + '/api/video/classify/getClassifyVideos?pageSize=30&page=' + pg + '&classifyId=' + getMyVar('视频', '1') + '&sortNum=' + getMyVar('视频分类', '1');
+                log(url);
                 let html2 = post(url);
                 var list = JSON.parse(html2).data;
                 var domain = JSON.parse(html2).domain;
