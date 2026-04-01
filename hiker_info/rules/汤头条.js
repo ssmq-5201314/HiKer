@@ -25,7 +25,7 @@ const csdown = {
         var c1 = [{
             title: '首页&小视频&社区&微帖&分类',
             id: '1&2&3&4&5',
-            img: 'https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/47.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/175.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/78.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/48.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/109.png'
+            img: 'https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/47.png&https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/175.png&https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/78.png&https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/48.png&https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/109.png'
         }];
         if (MY_PAGE == 1) {
             eval(csdown.rely(csdown.aes))
@@ -59,7 +59,7 @@ const csdown = {
           // default:
         }
         */
-        if (MY_RULE.author == csdown.author || MY_NAME == '嗅觉浏览器') {
+      
         if (分类 == 1) {
             csdown.video()
         } else if (分类 == 2) {
@@ -71,13 +71,7 @@ const csdown = {
         } else if (分类 == 5) {
             csdown.vodlei()
         }
-        } else {
-            d.push({
-                title: '请勿修改作者名称',
-                url: 'hiker://empty',
-                col_type: 'text_center_1',
-            })
-        }
+     
         setResult(d)
     },
     aes: $.toString(() => {
