@@ -386,6 +386,7 @@ const csdown = {
         }
         try {
             let url = getItem('host') + '/api/v2/video/search';
+            log(url)
             let body = '{"timestamp":' + t + ',"version":"0.1.0","os":"h5","page":' + pg + ',"page_size":20,"keyword":"' + getMyVar('keyword') + '","type":1,"uid":' + getItem('uid') + ',"token":"' + getItem('token') + '"}';
             let list = post(url, body).list;
             list.forEach(data => {
