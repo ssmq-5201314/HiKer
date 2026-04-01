@@ -342,9 +342,7 @@ const csdown = {
         eval(csdown.rely(csdown.aes));
         let pg = getParam('page');
         try {
-            if (MY_PAGE == 1) {
-                toast('抖音图片无法显示')
-            }
+    
             let url = getItem('host') + '/api/v2/video/short/videos';
             toast('123')
             let body = '{"timestamp":' + t + ',"version":"0.1.0","os":"h5","uid":' + getItem('uid') + ',"token":"' + getItem('token') + '"}';
