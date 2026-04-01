@@ -8,14 +8,14 @@ const csdown = {
     home: () => {
         var d = csdown.d;
         if (MY_PAGE == 1) {
-            d.push({   
+            d.push({
                 title: "搜索 ",
                 url: $.toString(() => {
                     putMyVar('keyword', input)
                     return 'hiker://empty?page=fypage@rule=js:$.require("csdown").search()'
                 }),
-                   desc: "请输入搜索关键词",
-                   col_type: "input",
+                desc: "请输入搜索关键词",
+                col_type: "input",
                 extra: {
                     defaultValue: getMyVar('keyword', ''),
                 }
@@ -243,15 +243,15 @@ const csdown = {
         var d = csdown.d;
         eval(csdown.rely(csdown.aes));
         if (MY_PAGE == 1) {
-            d.push({   
+            d.push({
                 title: "搜索 ",
                 url: $.toString(() => {
                     putMyVar('keyword', input)
                     refreshPage(false)
                     return "hiker://empty"
                 }),
-                   desc: "请输入搜索关键词",
-                   col_type: "input",
+                desc: "请输入搜索关键词",
+                col_type: "input",
                 extra: {
                     defaultValue: getMyVar('keyword', ''),
                     pageTitle: '搜索结果'
