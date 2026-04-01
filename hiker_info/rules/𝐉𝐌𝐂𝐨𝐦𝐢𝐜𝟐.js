@@ -76,7 +76,7 @@ const csdown = {
             });
         }
         var 分类 = getMyVar('首页', '1');
-        if (MY_RULE.author == csdown.author || MY_NAME == '嗅觉浏览器') {
+        
             if (分类 == 1) {
                 csdown.main()
             } else if (分类 == 2) {
@@ -84,13 +84,7 @@ const csdown = {
             } else if (分类 == 3) {
                 csdown.week()
             }
-        } else {
-            d.push({
-                title: '请勿修改作者名称',
-                url: 'hiker://empty',
-                col_type: 'text_center_1',
-            })
-        }
+        
         setResult(d)
     },
     main: () => {
