@@ -38,22 +38,14 @@ const csdown = {
                 col_type: 'big_blank_block',
             });
         }
-        var 分类 = getMyVar('c1', '1');
-        if (MY_RULE.author == csdown.author || MY_NAME == '嗅觉浏览器') {
+        var 分类 = getMyVar('c1', '1');       
             if (分类 == 1) {
                 csdown.black()
             } else if (分类 == 2) {
                 csdown.video()
             } else if (分类 == 3) {
                 csdown.topic()
-            }
-        } else {
-            d.push({
-                title: '请勿修改作者名',
-                url: 'hiker://empty',
-                col_type: 'text_center_1'
-            })
-        }
+            }       
         setResult(d)
     },
     aes: $.toString(() => {
