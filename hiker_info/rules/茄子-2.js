@@ -142,7 +142,7 @@ const csdown = {
                                     js: $.toString(() => {
                                         var raw = getItem('gonggao');
                                         var url = (raw && raw.match(/线路集合(.*?)《/)) ? raw.match(/线路集合(.*?)《/)[1].trim().split('|') :
-                                            'http://randomapi06.changfapiaopiao.top|http://randomstr.changfapiaopiao.top|http://randomapi08.changfapiaopiao.top|http://api6688.fltv.top/api|http://s001.xka3b.top/api6'.split('|');
+                                            'http://randomapi06.sexladyya.top|http://randomstr.sexladyya.top|http://randomapi08.sexladyya.top|http://api6688.fltv.top/api|http://s001.xka3b.top/api6'.split('|');
 
                                         var option = url.map((_, i) => `线路${i + 1}`);
                                         var Line = {
@@ -191,7 +191,7 @@ const csdown = {
             //log(getItem('data'))
             //log(getItem('gonggao'))
             //log(getItem('avbk'))
-            var list = getItem('shouye').split('首页数据开始')[1].split('首页数据结束')[0].replace(/https?\:\/\/(api1?\.)?(changfapiaopiao|yilushunfeng|phpjiekou|apijiekou)\.top(\/api)?/g, getItem('host')).split('换行');
+            var list = getItem('shouye').split('首页数据开始')[1].split('首页数据结束')[0].replace(/https?\:\/\/(api1?\.)?(sexladyya|yilushunfeng|phpjiekou|apijiekou)\.top(\/api)?/g, getItem('host')).split('换行');
             var imgurl = getItem('dizhi');
             list.forEach(data => {
                 var qd = sp(data, "qd(", ")");
@@ -382,7 +382,7 @@ const csdown = {
                 */
             )
 
-            var list1 = getItem('shouye').split('分割线')[1].replace(/https?\:\/\/(api1?\.)?(changfapiaopiao|yilushunfeng|phpjiekou|apijiekou)\.top(\/api)?/g, getItem('host')).split('换行');
+            var list1 = getItem('shouye').split('分割线')[1].replace(/https?\:\/\/(api1?\.)?(sexladyya|yilushunfeng|phpjiekou|apijiekou)\.top(\/api)?/g, getItem('host')).split('换行');
             list1.forEach(data => {
                 var qd = sp(data, "qd(", ")");
                 var tp = sp(data, "tp(", ")");
@@ -451,7 +451,7 @@ const csdown = {
                     nbym = 'http://c001.xka3a.top';
                 }
                 var dizhi = nbym || fabu || 'http://c001.xka3a.top';
-                const host = 'http://randomapi06.changfapiaopiao.top';
+                const host = 'http://randomapi06.sexladyya.top';
                 let shouye = qzDecrypt(request(dizhi + '/encrypt/api.php?path=qiezi/shouye'));
 
                 let data = qzDecrypt(request(dizhi + '/encrypt/api.php?path=qiezi/zonghe'));
@@ -473,8 +473,8 @@ const csdown = {
                 toast('数据已更新');
                 log('数据已更新');
                 /*  
-    域名替换匹配表达式https?://(api1?\.)?(changfapiaopiao|yilushunfeng|phpjiekou|apijiekou)\.top(/api)?《 
-线路集合http://rfEXkbyp.yilushunfeng.top|http://rfEXkbyp.changfapiaopiao.top|http://api1.apijiekou.top/api|http://api.phpjiekou.top|http://api.22s.lol/api《 
+    域名替换匹配表达式https?://(api1?\.)?(sexladyya|yilushunfeng|phpjiekou|apijiekou)\.top(/api)?《 
+线路集合http://rfEXkbyp.yilushunfeng.top|http://rfEXkbyp.sexladyya.top|http://api1.apijiekou.top/api|http://api.phpjiekou.top|http://api.22s.lol/api《 
 失效域名集合https://api.yilushunfeng.top|http://api.yilushunfeng.top|http://api11.phpjiekou.top《 
 最新接口域名https://api1.yilushunfeng.top《
 */
@@ -486,7 +486,7 @@ const csdown = {
         try {
             const d = csdown.d;
             // var list=getItem('data').split('综合数据开始')[1].split('综合数据结束')[0].split('换行');
-            var list = getItem('data').split('综合数据开始')[1].split('AV百科')[0].replace(/https?\:\/\/(api1?\.)?(changfapiaopiao|yilushunfeng|phpjiekou|apijiekou)\.top(\/api)?/g, getItem('host')).replace(/分割线/g, '换行').split('换行');
+            var list = getItem('data').split('综合数据开始')[1].split('AV百科')[0].replace(/https?\:\/\/(api1?\.)?(sexladyya|yilushunfeng|phpjiekou|apijiekou)\.top(\/api)?/g, getItem('host')).replace(/分割线/g, '换行').split('换行');
             var imgurl = getItem('dizhi');
             list.forEach(data => {
                 var qd = sp(data, "qd(", ")");
