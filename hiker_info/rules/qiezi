@@ -274,7 +274,7 @@ var option = url.map((_, i) => `线路${i + 1}`);
                         wz: 'jav',
                     }
                 },
-                /*
+                
                  {
                     title: '秘爱',
                     img: imgurl+'/6img/miai.jpg',
@@ -285,7 +285,7 @@ var option = url.map((_, i) => `线路${i + 1}`);
                         wz: 'miai',
                     }
                 },
-                */
+                
                 {
                     title: 'UAA视频',
                     img: imgurl+'/6img/uaa.png',
@@ -296,7 +296,7 @@ var option = url.map((_, i) => `线路${i + 1}`);
                         wz: 'uaa',
                     }
                 },
-                /*
+                
                 {
                     title: 'UU视频',
                     img: imgurl+'/6img/uusp.png',
@@ -307,7 +307,7 @@ var option = url.map((_, i) => `线路${i + 1}`);
                         wz: 'uushipin',
                     }
                 }, 
-                */
+                
                 {
                     title: '图宅',
                     img: imgurl+'/6img/tuzac.png',
@@ -318,7 +318,7 @@ var option = url.map((_, i) => `线路${i + 1}`);
                         wz: 'tuzac',
                     }
                 },
-                /*
+                
                  {
                     title: '嘿嘿连载',
                     img: imgurl+'/6img/heiheilz.png',
@@ -338,7 +338,7 @@ var option = url.map((_, i) => `线路${i + 1}`);
                         wz: 'jinmantt',
                     }
                 }, 
-                */
+                
                 {
                     title: '暗网[每日大赛]',
                     img: imgurl+'/6img/meiridasai.png',
@@ -367,7 +367,7 @@ var option = url.map((_, i) => `线路${i + 1}`);
                         wz: 'btt',
                     }
                 },
-                /*
+                
                     {
                         title: '小狐狸',
                         img: imgurl+'/6img/xiaohuli1.png',
@@ -378,7 +378,7 @@ var option = url.map((_, i) => `线路${i + 1}`);
                             wz: 'xiaohuli',
                         }
                 }
-                */
+                
             )
 
             var list1 = getItem('shouye').split('分割线')[1].replace(/https?\:\/\/(api1?\.)?(changfapiaopiao|yilushunfeng|phpjiekou|apijiekou)\.top(\/api)?/g, getItem('host')).split('换行');
