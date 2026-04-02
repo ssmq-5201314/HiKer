@@ -7,9 +7,9 @@ const csdown = {
     },
     home: () => {
         //地址:https://douyin116.xyz/
-        //主uid=6299321
-        //备用uid=6299614
+        //uid=6300193,14530664,14532233,14532469
         var d = csdown.d;
+        var vipUid = 6300193;
         if (MY_PAGE == 1) {
             d.push({
                 title: "搜索 ",
@@ -28,7 +28,7 @@ const csdown = {
         let 首页 = [{
             title: '视频&抖音',
             id: '1&2&3&4&5',
-            img: 'https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/47.png&https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/175.png&https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/78.png&https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/48.png&https://ghproxy.net/https://raw.githubusercontent.com/ssmq-5201314/tubiao/main/more/109.png'
+            img: 'https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/47.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/175.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/78.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/48.png&https://ghproxy.net/https://raw.githubusercontent.com/ls125781003/tubiao/main/more/109.png'
         }];
         if (MY_PAGE == 1) {
             eval(csdown.rely(csdown.aes));
@@ -42,13 +42,11 @@ const csdown = {
             });
         }
         var 分类 = getMyVar('首页', '1');
-
-        if (分类 == 1) {
-            csdown.video()
-        } else if (分类 == 2) {
-            csdown.mini()
-        }
-
+            if (分类 == 1) {
+                csdown.video()
+            } else if (分类 == 2) {
+                csdown.mini()
+            }
         setResult(d)
     },
     aes: $.toString(() => {
@@ -57,7 +55,7 @@ const csdown = {
         var t = Math.floor(Date.now());
         //生成随机uuid
         function generateUUID() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
                 var r = Math.random() * 16 | 0;
                 var v = c === 'x' ? r : (r & 0x3 | 0x8);
                 return v.toString(16);
@@ -116,7 +114,7 @@ const csdown = {
 
         function timestampToTime(tm, ts) {
             undefined
-            let date = new Date(tm * 1000); //时间戳为10位需*1000，时间戳为13位的话不需乘1000
+            let date = new Date(tm * 1000); //时间戳为10位需*1000,时间戳为13位的话不需乘1000
             let Y = date.getFullYear() + '-';
             let M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
             let D = date.getDate();
@@ -132,7 +130,7 @@ const csdown = {
 
         var image = $('').image(() => {
             const CryptoUtil = $.require("hiker://assets/crypto-java.js");
-            let decode = function (data) {
+            let decode = function(data) {
                 let key = 88;
                 const binaryArr = [];
                 let bytes = data;
@@ -202,7 +200,6 @@ const csdown = {
         try {
             if (!getMyVar('info', '')) {
                 let url = getItem('host') + '/api/v1/member/info?t=' + t;
-                log(url)
                 let body = '{"timestamp":' + t + ',"version":"0.1.0","os":"h5","uid":' + getItem('uid') + ',"token":"' + getItem('token') + '"}';
                 let data = post(url, body);
                 let uid = data.uid + '';
@@ -270,7 +267,7 @@ const csdown = {
                     title: data.title,
                     desc: timestampToTime(data.created_at, 1) + '\t\t\t' + parseInt(data.video_length / 60) + ':' + parseInt(data.video_length % 60),
                     img: data.horizontal_cover + image,
-                    url: getItem('host') + '/api/v2/video/player.m3u8?vid=' + data.id + '&uid=6299321',
+                    url: getItem('host') + '/api/v2/video/player.m3u8?vid=' + data.id + '&uid=' + home.vipUid,
                     col_type: 'movie_2',
                     extra: {
                         id: data.id,
@@ -280,7 +277,7 @@ const csdown = {
         } catch (e) {
             log(e.message)
             if (getMyVar('a') == '') {
-                let host = 'https://mzyapi.diao.it';
+                let host = 'https://mzyapi.91u.sh';
                 putMyVar('a', '1')
                 setItem('host', host)
                 // 调用方法生成随机字符串
@@ -325,7 +322,7 @@ const csdown = {
                     title: data.title,
                     desc: timestampToTime(data.created_at, 1) + '\t\t\t' + parseInt(data.video_length / 60) + ':' + parseInt(data.video_length % 60),
                     img: data.horizontal_cover + image,
-                    url: getItem('host') + '/api/v2/video/player.m3u8?vid=' + data.id + '&uid=6299321',
+                    url: getItem('host') + '/api/v2/video/player.m3u8?vid=' + data.id + '&uid=6300193',
                     col_type: 'movie_2',
                     extra: {
                         id: data.id,
@@ -342,9 +339,10 @@ const csdown = {
         eval(csdown.rely(csdown.aes));
         let pg = getParam('page');
         try {
-    
+            if (MY_PAGE == 1) {
+                toast('抖音图片无法显示')
+            }
             let url = getItem('host') + '/api/v2/video/short/videos';
-            toast('123')
             let body = '{"timestamp":' + t + ',"version":"0.1.0","os":"h5","uid":' + getItem('uid') + ',"token":"' + getItem('token') + '"}';
             let list = post(url, body).list;
             list.forEach(data => {
@@ -352,7 +350,7 @@ const csdown = {
                     title: data.title,
                     desc: timestampToTime(data.created_at, 0) + '\t\t\t' + parseInt(data.video_length / 60) + ':' + parseInt(data.video_length % 60),
                     img: data.horizontal_cover + image,
-                    url: getItem('host') + '/api/v2/video/player.m3u8?vid=' + data.id + '&uid=6299321',
+                    url: getItem('host') + '/api/v2/video/player.m3u8?vid=' + data.id + '&uid=6300193',
                     col_type: 'pic_2_card',
                     extra: {
                         id: data.id,
@@ -385,7 +383,6 @@ const csdown = {
         }
         try {
             let url = getItem('host') + '/api/v2/video/search';
-            log(url)
             let body = '{"timestamp":' + t + ',"version":"0.1.0","os":"h5","page":' + pg + ',"page_size":20,"keyword":"' + getMyVar('keyword') + '","type":1,"uid":' + getItem('uid') + ',"token":"' + getItem('token') + '"}';
             let list = post(url, body).list;
             list.forEach(data => {
@@ -393,7 +390,7 @@ const csdown = {
                     title: data.title,
                     desc: timestampToTime(data.created_at, 1) + '\t\t\t' + parseInt(data.video_length / 60) + ':' + parseInt(data.video_length % 60),
                     img: data.horizontal_cover + image,
-                    url: getItem('host') + '/api/v2/video/player.m3u8?vid=' + data.id + '&uid=6299321',
+                    url: getItem('host') + '/api/v2/video/player.m3u8?vid=' + data.id + '&uid=6300193',
                     col_type: 'movie_2',
                     extra: {
                         id: data.id,
