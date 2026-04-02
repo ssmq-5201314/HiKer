@@ -581,6 +581,8 @@ const Apollo = {
         var id = pdfh(html, "#page-video&&v-scope").match(/id:.(\d+)/)[1]
         Apollo.d.push({
             pic_url: pdfh(html, '#player&&data-poster') + '@Referer=' + Apollo.url,
+url:'video://' + url,
+/*
             url: $(url + '#noHistory#').lazyRule((id) => {
                 var video = getHome(input) + "/zh/ajax/v/" + id + "/videos";
                 var data = JSON.parse(fetch(video, {
@@ -603,6 +605,7 @@ const Apollo = {
                 };
                 return playlist
             }, id),
+*/
             col_type: 'pic_1_full',
         })
 
