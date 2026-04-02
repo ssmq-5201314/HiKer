@@ -1,7 +1,7 @@
 const Apollo = {
     version: "20250508",
     empty: 'hiker://empty',
-    url: "https://123av.ws/zh/",
+    url: "https://123av.com/zh/",
     d: [],
     getRangeColors: function() {
         return '#' + ('00000' + (Math.random() * 0x1000000 << 0)
